@@ -16,8 +16,10 @@ class SearchBar extends Component {
     //this.state.term = event.target.value = BAD!!!! always use setState method to inform react so it can do its magic
     return (
       <div>
-        <input onChange={event => this.setState({ term: event.target.value })}/>
-        Value of the input: {this.state.term}
+        <input
+          value={this.state.term}
+          onChange={event => this.setState({ term: event.target.value })}
+          />
       </div>
     );
   }
