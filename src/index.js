@@ -4,6 +4,7 @@ import React, { Component } from 'react'; //core react library creates and manag
 import ReactDOM from 'react-dom'; //seperate library to handle rendering components to the DOM
 import YTSearch from 'youtube-api-search'
 import SearchBar from './components/search_bar';
+import VideoList from './components/video_list';
 
 const API_KEY = 'AIzaSyC0DI7yGZouRUGxUER25puxIf--2Dh3Ub8';
 
@@ -24,6 +25,7 @@ class App extends Component{
     return (
       <div>
         <SearchBar />
+        <VideoList videos={this.state.videos} />
       </div>
     );
   }
