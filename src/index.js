@@ -2,11 +2,14 @@
 //and assign it to variable React
 import React from 'react'; //core react library creates and manages components
 import ReactDOM from 'react-dom'; //seperate library to handle rendering components to the DOM
-
+import YTSearch from 'youtube-api-search'
 import SearchBar from './components/search_bar';
 
 const API_KEY = 'AIzaSyC0DI7yGZouRUGxUER25puxIf--2Dh3Ub8';
 
+YTSearch({key:API_KEY, term:'surfboards'},function(data){
+  console.log(data);
+});
 // Create a new component. this should produce some html
 // this is a class/type of a component, not an instance
 // this function is a factory that produces instances of the component
