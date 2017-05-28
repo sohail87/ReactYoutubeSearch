@@ -3,11 +3,19 @@
 import React from 'react'; //core react library creates and manages components
 import ReactDOM from 'react-dom'; //seperate library to handle rendering components to the DOM
 
+import SearchBar from './components/search_bar';
+
+const API_KEY = 'AIzaSyC0DI7yGZouRUGxUER25puxIf--2Dh3Ub8';
+
 // Create a new component. this should produce some html
 // this is a class/type of a component, not an instance
 // this function is a factory that produces instances of the component
 const App = () => {
-  return <div>Hi!</div>;
+  return (
+    <div>
+      <SearchBar />
+    </div>
+  );
 }
 
 
